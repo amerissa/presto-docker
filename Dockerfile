@@ -29,4 +29,6 @@ RUN set -xeu && \
 
 COPY etc /usr/lib/presto/etc
 
-CMD /usr/lib/presto/bin/launcher run
+COPY server-start.sh /server-start.sh
+
+CMD /bin/bash /server-start.sh
